@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductsComponent } from './products/products.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
