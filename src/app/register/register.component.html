@@ -1,6 +1,9 @@
  <div class="w-75 mx-auto py-4">
     <h4>register name</h4>
 
+    <div *ngIf="apisError" class="alert alert-danger">
+        {{apisError}}
+    </div>
 
     <form (ngSubmit)="handelRegister(registerForm)" [formGroup]="registerForm"  >
 
@@ -56,6 +59,9 @@
         </div>
 
 
-        <button [disabled]="registerForm.invalid" type="submit" class="btn border-none border-0 mt-3 text-white bg-main">Register</button>
+        <button [disabled]="registerForm.invalid" type="submit" class="btn border-none border-0 mt-3 text-white bg-main">
+            <i class="fas fa-spinner fa-spin" *ngIf="isLogin"></i>
+            <span *ngIf="!isLogin">Register</span>
+        </button>
     </form>
  </div>
