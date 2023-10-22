@@ -8,6 +8,11 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent {
 
+  logout()
+  {
+    this._AuthService.logout()
+  }
+
   isLogin:boolean=false;
   constructor(private _AuthService:AuthService)
   {

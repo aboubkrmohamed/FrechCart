@@ -22,5 +22,46 @@ body
 {
     color: var(--rating-color);
 }
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a ,a:hover
+{
+    color: #000;
+    text-decoration: none;
+}
 
- 
+.product:hover
+{
+     border: solid 1px var(--main-color);
+}
+.product .btn
+{
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+
+.font-sm
+{
+    font-size: 14px;
+}
+
+.text-main
+{
+    color:var(--main-color)
+}
+.bg-main-light
+{
+    background-color: var(--light-color);
+}

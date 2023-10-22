@@ -1,4 +1,26 @@
-<p>home works!</p>
+
+<div class="row">
+    <div *ngFor="let product of products" class="col-md-2">
+        <div class="product px-2 py-4">
+            <img src={{product.imageCover}} class="w-100">
+            <span class="text-main fw-bold font-sm">{{product.category.name}}</span>
+            <h3 class="h6 fw-bolder">{{product.title.split(' ').slice(0,2).join(' ')  }}</h3>
+
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="text-muted fw-bold font-sm">{{product.price}} EGP</span>
+
+                <div class="">
+                    <span class="text-muted fw-bold font-sm">{{product.ratingsAverage}}  </span>
+                    <i class="fas fa-star rating-color"></i>
+                </div>
 
 
+            </div>
+    
+
+            <button class="btn bg-main text-white w-100 mt-3 my-2"> + Add</button>
+
+        </div>
+    </div>
+</div>
  
