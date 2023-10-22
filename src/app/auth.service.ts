@@ -9,8 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
    userData=new BehaviorSubject(null);
+  constructor( private _HttpClient:HttpClient , private _router:Router) { 
 
-  constructor( private _HttpClient:HttpClient , private _router:Router) { }
+    if(localStorage.getItem('userToken')!==null )
+    {
+      this.decodeUserData()
+    }
+    
+  }
 
 
   decodeUserData()

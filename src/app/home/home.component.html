@@ -1,7 +1,12 @@
 
 <div class="row">
     <div *ngFor="let product of products" class="col-md-2">
-        <div class="product px-2 py-4">
+
+
+        <div class="product px-2 py-2">
+
+            <a [routerLink]="['/productDetails',product._id]">
+
             <img src={{product.imageCover}} class="w-100">
             <span class="text-main fw-bold font-sm">{{product.category.name}}</span>
             <h3 class="h6 fw-bolder">{{product.title.split(' ').slice(0,2).join(' ')  }}</h3>
@@ -19,7 +24,8 @@
     
 
             <button class="btn bg-main text-white w-100 mt-3 my-2"> + Add</button>
-
+        </a>
+        
         </div>
     </div>
 </div>

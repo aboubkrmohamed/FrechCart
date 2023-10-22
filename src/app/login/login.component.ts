@@ -11,7 +11,12 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   
-  constructor(private _authService:AuthService , private _router:Router){}
+  constructor(private _authService:AuthService , private _router:Router){
+    if(localStorage.getItem('userToken') !==null)
+    {
+     _router.navigate(['/home'])
+    }
+  }
 
   loginForm:FormGroup=new FormGroup({
       

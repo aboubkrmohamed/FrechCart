@@ -9,15 +9,18 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsComponent } from './products/products.component';
+import { GuardGuard } from './guard.guard';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home', component:HomeComponent},
-  {path:'about', component:AboutComponent},
-  {path:'brands', component:BrandsComponent},
-  {path:'cart', component:CartComponent},
-  {path:'categories', component:CategoriesComponent},
-  {path:'products', component:ProductsComponent},
+  {path:'home', canActivate:[GuardGuard], component:HomeComponent},
+  {path:'about', canActivate:[GuardGuard], component:AboutComponent},
+  {path:'brands', canActivate:[GuardGuard], component:BrandsComponent},
+  {path:'cart', canActivate:[GuardGuard], component:CartComponent},
+  {path:'productDetails/:id', canActivate:[GuardGuard], component:ProductDetailsComponent},
+  {path:'categories', canActivate:[GuardGuard], component:CategoriesComponent},
+  {path:'products', canActivate:[GuardGuard], component:ProductsComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'**', component:NotfoundComponent},

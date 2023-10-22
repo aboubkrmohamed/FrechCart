@@ -15,4 +15,11 @@ export class ProductsService {
   {
    return  this._HttpClient.get('https://route-ecommerce.onrender.com/api/v1/products')
   }
+
+  
+  getProductsDetails(id:string):Observable<any>
+  {
+   return  this._HttpClient.get(`https://route-ecommerce.onrender.com/api/v1/products/${id}`)
+  }
+
 }
