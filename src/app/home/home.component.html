@@ -1,4 +1,6 @@
+<app-main-slider></app-main-slider>
 
+<app-categories></app-categories>
 <div class="row">
     <div *ngFor="let product of products" class="col-md-2">
 
@@ -12,7 +14,7 @@
             <h3 class="h6 fw-bolder">{{product.title.split(' ').slice(0,2).join(' ')  }}</h3>
 
             <div class="d-flex align-items-center justify-content-between">
-                <span class="text-muted fw-bold font-sm">{{product.price}} EGP</span>
+                <span class="text-muted fw-bold font-sm">{{product.price|currency:' '}} EGP</span>
 
                 <div class="">
                     <span class="text-muted fw-bold font-sm">{{product.ratingsAverage}}  </span>
