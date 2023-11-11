@@ -20,6 +20,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './main-slider/main-slider.component';
+import { BuyPipe } from './buy.pipe';
+import { SeemorePipe } from './seemore.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { MainSliderComponent } from './main-slider/main-slider.component';
     RegisterComponent,
     ProductsComponent,
     ProductDetailsComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    BuyPipe,
+    SeemorePipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
