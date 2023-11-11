@@ -65,3 +65,8 @@ a ,a:hover
 {
     background-color: var(--light-color);
 }
+
+.border-main
+{
+    border: solid 1px var(--main-color) !important;
+}
